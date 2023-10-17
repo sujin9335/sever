@@ -1,0 +1,32 @@
+package com.test;
+
+import java.util.Scanner;
+
+public class 정민 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+//		String a = sc.nextLine();
+		String a = "77 77 7777";
+		
+
+		String[] b=a.split(" ");
+		
+		int b1=Integer.parseInt(b[0]);
+		int b2=Integer.parseInt(b[1]);
+		int b3=Integer.parseInt(b[2]);
+		
+		
+		
+		int result1 = 0;
+		
+		result1=b1+b2+b3;
+
+		System.out.println(result1);
+		sc.close();
+		
+		
+		
+	}
+}

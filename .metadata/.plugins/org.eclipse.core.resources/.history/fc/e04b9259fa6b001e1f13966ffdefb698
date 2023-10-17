@@ -1,0 +1,43 @@
+package com.test;
+
+public class test {
+	
+	public static void main(String[] args) {
+		
+		int numer1=1;
+		int denom1=2;
+		int numer2=3;
+		int denom2=4;
+		
+		int nu=numer1*denom2+numer2*denom1;
+	    int de=denom1*denom2;
+		
+	  //4/8 6/8   10/8
+	    
+	    System.out.println(nu);
+		System.out.println(de);
+	    
+		
+		for(int i=2; i<=de; i++) {
+			if(nu%i == 0 && de%i == 0){
+				nu=nu/denom1;
+				de=de/denom1;
+			}else if(nu%i == 0 && de%i == 0){
+				nu=nu/denom2;
+				de=de/denom2;
+			}
+		}
+		
+		System.out.println(nu);
+		System.out.println(de);
+		
+//		System.out.println(re[0]);
+		
+		
+		
+	}
+	
+	
+	
+	
+}

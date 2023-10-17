@@ -1,0 +1,7 @@
+package com.test.servlet;
+
+public class Hi extends HttpServlet{
+	
+	
+
+}

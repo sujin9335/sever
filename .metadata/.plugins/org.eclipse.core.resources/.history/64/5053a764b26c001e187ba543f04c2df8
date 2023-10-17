@@ -1,0 +1,26 @@
+package com.test;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class 숫자야구 {
+
+	public static void main(String[] args) {
+		
+		try {
+			BufferedReader read=new BufferedReader(new InputStreamReader(System.in));
+			
+			int n=Integer.parseInt(read.readLine());
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+//		StringTokenizer line=new StringTokenizer();
+		
+		
+		
+		
+	}
+}

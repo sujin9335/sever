@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="&#x0D;&#x0A;&#x09;&#x09;String a1 = &quot;77 77 7777&quot;;"/>
+		<list key="findhistory">
+			<item value="&#x0D;&#x0A;&#x09;&#x09;String a1 = &quot;77 77 7777&quot;;"/>
+			<item value="&#x0D;&#x0A;&#x09;&#x09;writer.println(&quot;&lt;&gt;&quot;);&#x0D;&#x0A;&#x09;&#x09;writer.println(&quot;&lt;&gt;&quot;);"/>
+		</list>
+	</section>
+</section>

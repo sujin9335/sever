@@ -1,0 +1,9 @@
+package com.test.servlet;
+
+//1. 서블릿 클래스 선언
+
+public class Ex01 extends HttpServlet{
+
+	
+	
+}

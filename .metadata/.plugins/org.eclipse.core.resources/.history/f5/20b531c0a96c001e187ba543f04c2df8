@@ -1,0 +1,15 @@
+package com.test;
+
+import java.io.BufferedReader;
+
+public class 숫자야구 {
+
+	public static void main(String[] args) {
+		
+		BufferedReader() read=new BufferedReader(new inputStreamReader(System.in));
+		
+		
+		
+		
+	}
+}
