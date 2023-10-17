@@ -38,6 +38,8 @@
 
 	<div><%= 10 + 20 %></div>
 	<div><%= sum(10,20) %></div> 
+	
+	<!-- MyMath.java에서 불러온 m -->
 	<div><%= m.sum(10,20) %></div> 
 
 
