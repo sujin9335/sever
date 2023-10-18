@@ -137,9 +137,117 @@ request 객체
 3. 클라이언트에서 서버로 전송할 때의 여러가지 관련 정보 가져오기
 
 
+-----------------------------------------------10_18
+
+위에 이어서
+1. 클라이언트에서 서버로 전송한 데이터를 가져오기
+
+	- "ex09.jsp"
+	- "ex09_ok.jsp"
+	
+2. 클라이언트에서 서버로 전송한 데이터 인코딩 처리
+	- 계속 했음
+
+3. 클라이언트에서 서버로 전송할 때의 여러가지 관련 정보 가져오기
+	- "ex10_request.jsp"
+	
+	
+----------------------------------
+
+respone 객체
+- HttpServletRespnse
+
+1. 서버에서 클라이언트로 돌려주는 HTML 페이지 제작
+	- response.getWriter() > PrintWriter > HTML 제작
+
+2. 서버에서 클라이너트로 돌려주는 HTML 페이지 인코딩
+	- response.setCharacterEncoding("UTF-8")	//서블릿
+	- 페이지 지시자 > contentType="charset=UTF-8"	//JSP
+
+3. 서버에서 클라이너트로 돌려주는 HTML 페이지 MINE 설정
+	- contextType="text/html"
+	- 브라우저에게 돌려주는 페이지의 형식이 HTML 페이지 입니다.. 라고 알려주는 역할
+
+4. 페이지 이동하기
+	response : response.sendRedirect(주소)
+	첫번째페이지에서 response.sendRedirect(주소)를 만나도 첫번째페이지 읽고 출력해주고 
+		주소창에 두번째페이지 주소를 치고 두번째페이지를 읽고 출력해준다
+	- "ex11_response_1.jsp"
+	- "ex11_response_2.jsp"
+
+	
+	pageContext 객체 : pageContext.forward(주소)
+	첫번째페이지에서 pageContext.forward(주소)룰 만나면 하는일을 멈추고 서버내에서
+		바로 두번째 페이지를 출력해준다 (그래서 출력은 두번째인데 주소는 첫번쨰)
+	- "ex12_pagecontext_1.jsp"
+	- "ex12_pagecontext_2.jsp"
+
+--------------------------	
+	
+out 객체
+- 출력 객체
+- "ex13_out.jsp"
+
+
+	
+중요******
+request, pageContext, session, application
+- 내부에 데이터를 저장하는 공간이 있다.(Map)
+- setAttribute(), getAttribute()
+
+
+
+session 객체 : 개인값, 브라우저가마다 값이 다름 
+- 클라이언트(브라우저)의 세션 정보(접속 ~ 종료 : 개인 정보)를 저장/관리하는 객체
+
+	쇼핑몰 : 옛날에 장바구니데이터를 세션에 저장했었음==비용절약
+	- session.setAttribute("장바구니")
+
+
+웹사이트 == 웹응용프로그램 == 웹애플리케이션
+
+application 객체 : 공용변수, 자바로치면 static, 브라우저가 달라도 값이 같음
+- 애플리케이션(웹 사이트)의 전체적인 정보를 관리/조작하는 객체
+
+- "ex14_session_application.jsp"
+
+
+- "ex15_session.jsp"
+- "ex15_set.jsp"
+- "ex15_del.jsp"
+- "ex15_interval.jsp"
+- "ex15_reset.jsp"
+
+
+----------------------------
+
+
+파일 업로드/다운로드
+- 브라우저와 웹서버간의 파일 복사
+- 업로드: 클라이언트 자원 > (복사) > 서버측
+- 다운로드: 서버 자원 > (복사) > 클라이언트측
+
+파일 업로드 라이브러리
+- cos library
+- http://www.servlets.com
+
+단일 파일 업로드
+- "ex16.jsp"
+- "ex16_ok.jsp"
+
+다중 파일 업로드
+- "ex17.jsp"
+- "ex17_ok.jsp"
+
+이미지 뷰어
+- "ex18.jsp"
+- "ex18_ok.jsp"
+- "ex18_del.jsp"
 
 
 
 
 
 
+
+	

@@ -24,7 +24,10 @@
 	//다중 텍스트
 	String txt3=request.getParameter("txt3");
 	//입력쪽의 엔터는 div태그 안에 쓰여서 한줄로 보이게되서 엔터표현 처리가 필요함 : replace
+	
+	if(txt3 == null) txt3=""; //링크 클릭시 에서 if처리해야 오류안남
 	txt3=txt3.replace("\r\n", "<br>");
+	
 	
 	
 	//체크 박스 : value넣어서 처리하는게 좋다
@@ -64,7 +67,42 @@
 	String rb=request.getParameter("rb");
 	
 	
+	
+	/* 10-18 -------------------- */
+	
+	
+	//셀렉트 박스
+	String sel1=request.getParameter("sel1");
+	
+	//셀렉트 박스 multiple
+	String[] sel2=request.getParameterValues("sel1");
+	
+	
+	//히든 태그
+	String txt4=request.getParameter("txt4");
+	//히든 태그-버튼 몇번클릭
+	String count=request.getParameter("count");
+	
+	
+	//날짜
+	String regdate=request.getParameter("regdate");
+	
+	
+	//범위
+	String min=request.getParameter("min");
 
+	
+	//컬러
+	String color=request.getParameter("color");
+	
+	
+	
+	//---------링크
+	String id=request.getParameter("id");
+	String pw=request.getParameter("pw");
+	
+	
+	
 %>
 <!DOCTYPE html>
 <html>
@@ -101,6 +139,32 @@
 	<h2>라디오 버튼</h2>
 	<div><%= rb %></div>
 	
+	<h2>셀렉트 박스</h2>
+	<div><%= sel1 %></div>
+	
+	<h2>셀렉트 박스-multiple</h2>
+	<div><%= Arrays.toString(sel2) %></div>
+	
+	<h2>히든 태그</h2>
+	<div><%= txt4 %></div>
+	
+	<h2>히든 태그-몇번클릭</h2>
+	<div><%= count %></div>
+	
+	<h2>날짜</h2>
+	<div><%= regdate %></div>
+
+	<h2>범위</h2>
+	<div><%= min %></div>
+
+	<h2>컬러</h2>
+	<div style="background-color: <%= color %>;"><%= color %></div>
+
+	
+	<h2>링크</h2>
+	<div><%= id %>, <%= pw %></div>
+
+
 	
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="http://pinnpublic.dothome.co.kr/cdn/example-min.js"></script>
