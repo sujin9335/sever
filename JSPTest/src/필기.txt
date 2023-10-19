@@ -246,6 +246,58 @@ application 객체 : 공용변수, 자바로치면 static, 브라우저가 달�
 
 
 
+----------------------------10-19
+
+내장 객체 > 저장소 제공 > pageContext, request, session, application
+> 왜? + 선택 기준?? > 생명 주기를 기준
+
+- 내가 저장 + 사용할 데이터 > 어느 기간동안 사용하는지?
+- 내장 객체 > 어느 기간동안 객체가 유지 > 생명 주기
+
+- "ex19_scope_1.jsp": 데이터 입력 페이지
+- "ex19_scope_2.jsp": 데이터 수신 + 처리 페이지
+
+
+이동방식을 pageContext.forward() 로바꾸니 request에서 (4.)data값이 받아짐
+
+
+------
+
+Expression
+<% %>
+
+
+EL + JSTL
+- 구문 단순 + 가독성 향상
+- JSP 페이지에서 되도록 자바를 쓰지 말자!!
+
+EL 언어(Expression Language) : <% %>와는 다름
+- <%= %> 기능을 대신하기 위해서 만들어진 언어 > 가동석 향상
+- "ex20_el.jsp"
+
+
+
+-------
+
+JSTL
+- 액션 태그
+- JSP Standard Tag Library, 표준 태그 라이브러리 > 확장 태그
+- 자바의 프로그래밍 기능 > 태그로 구현(표현)
+- "ex21_jstl.jsp"
+
+
+
+
+-------
+
+웹페이지 기술(Basic) + 데이터 베이스
+
+새프로젝트
+- new > 자바 프로젝트 > "JDBCTest"
+
+
+
+
 
 
 
