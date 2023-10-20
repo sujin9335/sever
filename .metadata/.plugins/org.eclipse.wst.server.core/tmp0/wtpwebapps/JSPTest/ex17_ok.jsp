@@ -51,7 +51,7 @@
 	<h1>다운로드</h1>
 	
 	<% for(int i=0; i<3; i++) { %>
-	<div><a href="download.jsp?filename=<%= filename.get(i) %>&orgfilename=<%= orgfilename.get(i) %>">orgfilename.get(i)</a></div>
+	<div><a href="download.jsp?filename=<%= filename.get(i) %>&orgfilename=<%= orgfilename.get(i) %>"><%= orgfilename.get(i) %></a></div>
 	<% } %>
 
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>

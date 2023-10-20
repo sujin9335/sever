@@ -6,6 +6,7 @@ markOccurrences=false
 org.eclipse.jdt.internal.ui.navigator.layout=2
 org.eclipse.jdt.internal.ui.navigator.librariesnode=true
 org.eclipse.jdt.ui.formatterprofiles.version=21
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="java" deleted\="false" description\="\uC2A4\uCE90\uB108" enabled\="true" name\="scan">Scanner sc\=new Scanner(System.in);</template></templates>
 sourceHoverBackgroundColor=47,47,47
 spelling_locale_initialized=true
 useAnnotationsPrefPage=true
