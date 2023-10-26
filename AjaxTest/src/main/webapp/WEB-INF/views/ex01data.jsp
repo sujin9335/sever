@@ -18,6 +18,7 @@
 	<script src="http://pinnpublic.dothome.co.kr/cdn/example-min.js"></script>
 	<script>
 		
+		//받은값 count를 다시 처음화면으로 보내기
 		location.href = '/ajax/ex01.do?count=${count}';
 	
 	

@@ -28,7 +28,7 @@ public class Ex02Data extends HttpServlet {
 		int count=dao.getMemoCount();
 		
 		
-		//Ajax용은 JSP안만들고 이런식으로 데이터만 보내는 PrintWriter를 써서 보낸다
+		//Ajax용은 JSP안만들고 servlet 방식인 PrintWriter를 써서 보낸다
 		PrintWriter writer=resp.getWriter();
 		
 		writer.print(count);
@@ -37,7 +37,7 @@ public class Ex02Data extends HttpServlet {
 		
 		
 		
-		
+		//JSP 파일로 보내지 않고 servlet writer로 처리하기 때문에 지움
 //		req.setAttribute("count", count);
 //				
 //		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/ex02data.jsp");

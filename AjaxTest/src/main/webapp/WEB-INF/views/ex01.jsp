@@ -24,6 +24,7 @@
 	-->
 
 	<div>
+		<!-- 처음에는 count 값이 없어서 출력되지 않는다 -->
 		<input type="text" id="txt1" value="${count }">
 		<input type="button" value="버튼1" id="btn1">
 	</div>

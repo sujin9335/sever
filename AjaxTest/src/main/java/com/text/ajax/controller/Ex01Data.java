@@ -20,6 +20,7 @@ public class Ex01Data extends HttpServlet {
 		//메모가 몇개인지?
 		AjaxDAO dao=new AjaxDAO();
 		
+		//dao 클래스에서 DB count 값 가져오기
 		int count=dao.getMemoCount();
 		
 		req.setAttribute("count", count);

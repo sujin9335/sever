@@ -84,7 +84,8 @@
 			//단일값
 			//다중값
 			
-			$.ajax({
+			//단일값
+			/* $.ajax({
 				type: 'GET',
 				url: '/ajax/ex04data.do',
 				data: 'type=3',
@@ -108,13 +109,111 @@
 				}
 				
 				
-			});
+			}); */
 			
+			//다중값
+			$.ajax({
+				type: 'GET',
+				url: '/ajax/ex04data.do',
+				data: 'type=4',
+				dataType: 'xml',
+				//dataType: 'text',
+				success: function(result) {
+					
+					//finde(css선택자) 자식탐색
+					//alert($(result).find('name').text());	
+					
+					
+					/* $('#result2').append('<div>번호: ' + $(result).find('seq').text() + '</div>');
+					$('#result2').append('<div>이름: ' + $(result).find('name').text() + '</div>');
+					$('#result2').append('<div>암호: ' + $(result).find('pw').text() + '</div>');
+					$('#result2').append('<div>메모: ' + $(result).find('memo').text() + '</div>');
+					$('#result2').append('<div>날짜: ' + $(result).find('regdate').text() + '</div>'); */
+					
+					//alert($(result).text());
+					
+					//forEach((item, index) => {}) 통일 == 향상된 for문 : 자바랑 index item위치가 반대임
+					$(result).find('list > memo').each((index, item) => {
+						
+						$('#result2').append('<div>' + $(item).find('seq').text() + '</div>');
+						$('#result2').append('<div>' + $(item).find('name').text() + '</div>');
+						$('#result2').append('<div>' + $(item).find('pw').text() + '</div>');
+						$('#result2').append('<div>' + $(item).find('memo').text() + '</div>');
+						$('#result2').append('<div>' + $(item).find('regdate').text() + '</div>');
+						$('#reuslt2').append('<hr>');
+					});
+					
+				},
+				error: function(a,b,c) {
+					console.log(a,b,c);
+				}
+				
+				
+			});
 			
 			
 			
 		});
 		$('#btn3').click(function() {
+			
+			//단일값
+			/* $.ajax({
+				type: 'GEt',
+				url: '/ajax/ex04data.do',
+				data: 'type=5',
+				dataType: 'json',
+				success: function(result) {
+					
+					//alert(result.seq);
+					
+					$('#result3').append('<div>' + result.seq + '</div>')
+					$('#result3').append('<div>' + result.name + '</div>')
+					$('#result3').append('<div>' + result.pw + '</div>')
+					$('#result3').append('<div>' + result.memo + '</div>')
+					$('#result3').append('<div>' + result.regdate + '</div>')
+					
+				},
+				error: function(a,b,c) {
+					console.log(a,b,c);
+				}
+				
+				
+			}); */
+			
+			//다중값
+			$.ajax({
+				type: 'GEt',
+				url: '/ajax/ex04data.do',
+				data: 'type=6',
+				dataType: 'json',
+				success: function(result) {
+					
+					//alert(result.seq);
+					
+					
+					
+					$(result).each((index, memo)=> {
+						
+						$('#result3').append('<div>' + memo.seq + '</div>')
+						$('#result3').append('<div>' + memo.name + '</div>')
+						$('#result3').append('<div>' + memo.pw + '</div>')
+						$('#result3').append('<div>' + memo.memo + '</div>')
+						$('#result3').append('<div>' + memo.regdate + '</div>')
+						$('#reuslt3').append('<hr>');
+						
+					});
+					
+					
+				},
+				error: function(a,b,c) {
+					console.log(a,b,c);
+				}
+				
+				
+			});
+			
+			
+			
 			
 		});
 	

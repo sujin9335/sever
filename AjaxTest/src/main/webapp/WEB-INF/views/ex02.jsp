@@ -17,6 +17,7 @@
 		<input type="button" value="버튼1" id="btn1">
 	</div>
 	
+	<!-- 출력하는 데이터 띄우는 div -->
 	<div id="msg" class="message"></div>
 
 	<div>
