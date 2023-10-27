@@ -64,5 +64,21 @@ Ajax, Asynchronous JavaScript and XML
 					  > "Ex07Data.java"
 - views > "ex07.jsp" 
 
+------CRUD (Json-simple.jar)
+
+- AjaxTest > "script.sql"
+- com.text.ajax.controller > "Ex08.java"
+- com.text.ajax.service > "List.java"
+						> Add.java
+						> Edit.java
+- views > "ex08.jsp" 
+
+- com.test.controller.model > "AddressDTO.java"
+
+
+- jackson library > lib 복사
+
+
+
 
 
