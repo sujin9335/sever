@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="http://pinnpublic.dothome.co.kr/cdn/example-min.css">
 <style>
+	/* req에 저장된 list 가져와서 좌표 지정 */
 	<c:forEach items="${list}" var="dto">
 	#${dto.catid} {
 		left: ${dto.x}px;
@@ -50,6 +51,7 @@
 					type: 'POST',
 					url: '/ajax/ex07data.do',
 					data: {
+						//현재 x y 좌표
 						x: ui.position.left,
 						y: ui.position.top,
 						catid: this.id

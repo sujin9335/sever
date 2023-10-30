@@ -27,6 +27,7 @@ public class Ex07Data extends HttpServlet {
 		CatDTO dto=new CatDTO();
 		
 		System.out.println(x + " " + y + catid);
+		//dto에 x y id 저장
 		dto.setX(x);
 		dto.setY(y);
 		dto.setCatid(catid);
