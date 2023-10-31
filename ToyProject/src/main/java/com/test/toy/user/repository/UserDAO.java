@@ -98,6 +98,59 @@ public class UserDAO {
 		
 		return null;
 	}
+
+
+	public int unregister(String id) {
+
+		try {
+
+			String sql = "update tblUser set ing = 'n' where id = ?";
+
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, id);
+
+			return pstat.executeUpdate();
+			
+			
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return 0;
+	}
+
+
+	public UserDTO get(String id) {
+
+		try {
+			
+			String sql = "select * from tblUser where id = ?";
+			
+			pstat=conn.prepareStatement(sql);
+			pstat.setString(1, id);
+			
+			rs=pstat.executeQuery();
+			
+			if(rs.next()) {
+				UserDTO dto=new UserDTO();
+				
+				dto.setId(rs.getString("id"));
+				dto.setEmail(rs.getString("email"));
+				dto.setPic(rs.getString("pic"));
+				dto.setIntro(rs.getString("intro"));
+				
+				return dto;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		return null;
+	}
 		
 
 }

@@ -12,8 +12,8 @@
 	<%@ include file="/WEB-INF/views/inc/header.jsp" %>
 
 	<main id="main">
-		<h1>콘텐츠 제목<small>부제</small></h1>
-		콘텐츠 내용
+		<h1>콘텐츠 제목 <small>부제</small></h1>
+		
 	</main>
 
 	

@@ -6,6 +6,15 @@
 <head>
 <meta charset="UTF-8">
 <%@ include file="/WEB-INF/views/inc/asset.jsp" %>
+<style>
+	#form-list{
+		display: flex;
+	}
+	#form-list form{
+		margin-right: 5px;
+	}
+</style>
+
 
 </head>
 <body>
@@ -28,6 +37,25 @@
 			<button type="submit" class="add primary">로그인</button>
 		</form>
 		
+		<hr>
+		<!-- 프로젝트시 임시 로그인 방법 -->
+		<div id="form-list">
+			<form method="POST" action="/toy/user/login.do">
+			<input type="hidden" name="id" value="hong">
+			<input type="hidden" name="pw" value="1111">
+			<button type="submit" class="add primary">홍길동</button>
+			</form>
+			<form method="POST" action="/toy/user/login.do">
+			<input type="hidden" name="id" value="test">
+			<input type="hidden" name="pw" value="1111">
+			<button type="submit" class="add primary">테스트</button>
+			</form>
+			<form method="POST" action="/toy/user/login.do">
+			<input type="hidden" name="id" value="admin">
+			<input type="hidden" name="pw" value="1111">
+			<button type="submit" class="add primary">관리자</button>
+			</form>
+		</div>
 		
 	</main>
 

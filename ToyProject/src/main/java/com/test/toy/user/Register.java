@@ -60,7 +60,13 @@ public class Register extends HttpServlet {
 			dto.setPw(pw);
 			dto.setName(name);
 			dto.setEmail(email);
-			dto.setPic(pic);
+			
+			if(pic != null && !pic.equals("") ) {
+				dto.setPic(pic);
+			}else {
+				dto.setPic("pic.png");
+			}
+			
 			dto.setIntro(intro);
 			
 			UserDAO dao=new UserDAO();
@@ -68,7 +74,16 @@ public class Register extends HttpServlet {
 			int result=dao.register(dto);
 			
 			if(result == 1) {
+				
+				req.getSession().removeAttribute("id");
+				req.getSession().removeAttribute("name");
+				req.getSession().removeAttribute("lv");
+				
 				resp.sendRedirect("/toy/index.do");
+			}else {
+				PrintWriter writer=resp.getWriter();
+				writer.print("<script>alert('failed');history.back();</script>");
+				writer.close();
 			}
 			
 
@@ -78,10 +93,7 @@ public class Register extends HttpServlet {
 		}
 		
 		//0 또는 에러
-		PrintWriter writer=resp.getWriter();
-		writer.print("<script>alert('failed');history.back();</script>");
-		writer.close();
-
+		
 	}
 
 }
