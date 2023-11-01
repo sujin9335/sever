@@ -1,12 +1,12 @@
 package com.test.toy.user.model;
 
-import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 //Lombok 처리
+
 
 @Setter
 @Getter
